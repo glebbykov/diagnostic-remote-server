@@ -27,6 +27,7 @@ class DiagnFrame(tk.Tk):
 
     def diagnose(self):
         host = self.host_input.get()
+        self.host = host
         user = self.username_input.get()
         password = self.password_input.get()
 
@@ -91,16 +92,11 @@ class DiagnFrame(tk.Tk):
         diagnose_button.pack()
 
     def save_result(self):
-        host = self.host_input.get()
-        uptime = self.uptime.strip()
-        disk_space = self.disk_space.strip()
-        os_version = self.os_version.strip()
-
         with open("diagnostic_result.txt", "w") as f:
-            f.write("Host: " + host + "\n")
-            f.write("Uptime: " + uptime + "\n")
-            f.write("Disk Space: " + disk_space + "\n")
-            f.write("OS version: " + os_version + "\n")
+            f.write("Host: " + self.host + "\n")
+            f.write("Uptime: " + self.uptime.strip() + "\n")
+            f.write("Disk Space: " + self.disk_space.strip() + "\n")
+            f.write("OS version: " + self.os_version.strip() + "\n")
 
 app = DiagnFrame()
 app.mainloop()

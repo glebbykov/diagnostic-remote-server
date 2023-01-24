@@ -1,0 +1,5 @@
+Host: 192.168.11.20
+Uptime: 14:08:45 up  5:15,  1 user,  load average: 0.00, 0.00, 0.00
+Disk Space: Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda2        13G  1.5G   11G  13% /
+OS version: Debian GNU/Linux 11 (bullseye)
