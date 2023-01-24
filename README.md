@@ -29,7 +29,7 @@ You can save the results by clicking the "Save Result" button. The results will 
 
 ## Note
 
-The script uses the paramiko library to establish the SSH connection and run commands on the server. If your server requires key-based authentication, this script will not work.
+The script uses the paramiko library to establish the SSH connection and run commands on the server. If your server requires key-based authentication, this script will not work. To quickly enable password authentication for a user, use this script: https://github.com/glebbykov/pass_on.git
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
