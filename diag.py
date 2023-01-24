@@ -24,24 +24,28 @@ class DiagnFrame(tk.Tk):
 
         diagnose_button = tk.Button(self, text="Diagnose", command=self.diagnose)
         diagnose_button.pack()
-
-    def diagnose(self):
-        host = self.host_input.get()
-        username = self.username_input.get()
-        password = self.password_input.get()
+        
+def diagnose(self):
+        host = self.host_entry.get()
+        user = self.user_entry.get()
+        password = self.pass_entry.get()
 
         ssh = paramiko.SSHClient()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        try:
-            ssh.connect(host, username=username, password=password)
 
+        try:
+            ssh.connect(host, username=user, password=password)
             stdin, stdout, stderr = ssh.exec_command("uptime")
             uptime = stdout.read().decode("utf-8")
-            print("Uptime: ", uptime)
+            print("Uptime: ", uptime.strip())
 
             stdin, stdout, stderr = ssh.exec_command("df -h /")
             disk_space = stdout.read().decode("utf-8")
             print("Disk Space: \n", disk_space)
+
+            stdin, stdout, stderr = ssh.exec_command("cat /etc/os-release")
+            os_version = stdout.read().decode("utf-8")
+            print("OS version: \n", os_version.strip())
         except paramiko.ssh_exception.AuthenticationException as e:
             print("Failed to connect: Invalid credentials")
         except paramiko.ssh_exception.SSHException as e:
