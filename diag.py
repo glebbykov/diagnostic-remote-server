@@ -20,7 +20,7 @@ class DiagnFrame(tk.Tk):
             disk_space = stdout.read().decode("utf-8")
             print("Disk Space: \n", disk_space)
 
-            stdin, stdout, stderr = ssh.exec_command("cat /etc/os-release")
+            stdin, stdout, stderr = ssh.exec_command("cat /etc/os-release | grep 'NAME\|VERSION' | cut -d'=' -f2 | tr '\n' ' '")
             os_version = stdout.read().decode("utf-8")
             print("OS version: \n", os_version.strip())
         except paramiko.ssh_exception.AuthenticationException as e:
