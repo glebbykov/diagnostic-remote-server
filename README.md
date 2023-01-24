@@ -2,7 +2,7 @@
 This is a simple GUI application that allows you to diagnose your server's uptime, the volume of the root disk space, and OS version.
 
 The application looks like this:
-[diag_py](https://user-images.githubusercontent.com/122178014/214346924-20a7a297-0821-41d9-9429-07b2f6b5b00e.PNG)
+[An example of the output](https://user-images.githubusercontent.com/122178014/214346924-20a7a297-0821-41d9-9429-07b2f6b5b00e.PNG)
 
 ## Getting Started!
 
