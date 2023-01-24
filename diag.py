@@ -41,17 +41,10 @@ class DiagnFrame(tk.Tk):
             stdin, stdout, stderr = ssh.exec_command("df -h /")
             disk_space = stdout.read().decode("utf-8")
 
-            #stdin, stdout, stderr = ssh.exec_command("cat /etc/os-release | grep 'PRETTY_NAME'| cut -d'=' -f2")
-            #os_version = stdout.read().decode("utf-8")
-            #os_version = os_version.strip().split("\n")
-            #os_version = os_version.strip().split("\n")
-            #os_version = " ".join([i.strip().strip('"') for i in os_version])
-
             stdin, stdout, stderr = ssh.exec_command("cat /etc/os-release | grep 'PRETTY_NAME'| cut -d'=' -f2")
             os_version = stdout.read().decode("utf-8")
             os_version = os_version.strip().split("\n")
             os_version = " ".join([i.strip().strip('"') for i in os_version])
-            print("OS version: ", os_version)
 
             self.result_window = tk.Toplevel(self)
             self.result_window.title("Diagnostic Result")
@@ -71,10 +64,6 @@ class DiagnFrame(tk.Tk):
             print("Failed to connect: ", e)
         finally:
             ssh.close()
-
-    def __init__(self):
-        tk.Tk.__init__(self)
-        self.title("Server Diagn Tool")
 
         # Create widgets
         host_label = tk.Label(self, text="Host: ")
