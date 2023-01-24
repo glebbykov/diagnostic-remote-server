@@ -1,5 +1,16 @@
-Host: 192.168.11.20
-Uptime: 14:08:45 up  5:15,  1 user,  load average: 0.00, 0.00, 0.00
+Host: 192.168.11.24
+Uptime: 14:32:38 up  8:18,  1 user,  load average: 0.00, 0.01, 0.05
+Disk Space: Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda2        20G  5.1G   15G  26% /
+OS version: CentOS Linux 7 (Core)
+_________________________________________________Host: 192.168.11.20
+Uptime: 14:33:33 up  5:40,  0 users,  load average: 0.00, 0.00, 0.00
 Disk Space: Filesystem      Size  Used Avail Use% Mounted on
 /dev/vda2        13G  1.5G   11G  13% /
 OS version: Debian GNU/Linux 11 (bullseye)
+_________________________________________________Host: 192.168.11.20
+Uptime: 14:33:33 up  5:40,  0 users,  load average: 0.00, 0.00, 0.00
+Disk Space: Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda2        13G  1.5G   11G  13% /
+OS version: Debian GNU/Linux 11 (bullseye)
+_________________________________________________

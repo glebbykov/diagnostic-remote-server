@@ -92,11 +92,12 @@ class DiagnFrame(tk.Tk):
         diagnose_button.pack()
 
     def save_result(self):
-        with open("diagnostic_result.txt", "w") as f:
+        with open("diagnostic_result.txt", "a") as f:
             f.write("Host: " + self.host + "\n")
             f.write("Uptime: " + self.uptime.strip() + "\n")
             f.write("Disk Space: " + self.disk_space.strip() + "\n")
             f.write("OS version: " + self.os_version.strip() + "\n")
+            f.write("_________________________________________________")
 
 app = DiagnFrame()
 app.mainloop()
