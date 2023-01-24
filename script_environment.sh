@@ -12,8 +12,6 @@ sudo yum -y install python3-tkinter
 
 sudo pip3 install paramiko
 
-#pip3 install pyperclipS
-
 yum -y groupinstall "GNOME Desktop" "Graphical Administration Tools"
 
 ln -sf /lib/systemd/system/runlevel5.target /etc/systemd/system/default.target
