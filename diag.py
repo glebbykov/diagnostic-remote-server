@@ -36,50 +36,23 @@ class DiagnFrame(tk.Tk):
 
         # Create widgets
         host_label = tk.Label(self, text="Host: ")
-        host_label.grid(row=0, column=0)
+        host_label.pack()
         self.host_input = tk.Entry(self)
-        self.host_input.grid(row=0, column=1)
+        self.host_input.pack()
 
         username_label = tk.Label(self, text="Username: ")
-        username_label.grid(row=1, column=0)
+        username_label.pack()
         self.username_input = tk.Entry(self)
-        self.username_input.grid(row=1, column=1)
+        self.username_input.pack()
 
         password_label = tk.Label(self, text="Password: ")
-        password_label.grid(row=2, column=0)
+        password_label.pack()
         self.password_input = tk.Entry(self, show="*")
-        self.password_input.grid(row=2, column=1)
+        self.password_input.pack()
 
         diagnose_button = tk.Button(self, text="Diagnose", command=self.diagnose)
-        diagnose_button.grid(row=3, column=1)
-        
-#def diagnose(self):
-#        host = self.host_entry.get()
-#        user = self.user_entry.get()
-#        password = self.pass_entry.get()
-#
-#        ssh = paramiko.SSHClient()
-#        ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-#
-#        try:
-#            ssh.connect(host, username=user, password=password)
-#            stdin, stdout, stderr = ssh.exec_command("uptime")
-#            uptime = stdout.read().decode("utf-8")
-#            print("Uptime: ", uptime.strip())
-#
-#            stdin, stdout, stderr = ssh.exec_command("df -h /")
-#            disk_space = stdout.read().decode("utf-8")
-#            print("Disk Space: \n", disk_space)
-#
-#            stdin, stdout, stderr = ssh.exec_command("cat /etc/os-release")
-#            os_version = stdout.read().decode("utf-8")
-#            print("OS version: \n", os_version.strip())
-#        except paramiko.ssh_exception.AuthenticationException as e:
-#            print("Failed to connect: Invalid credentials")
-#        except paramiko.ssh_exception.SSHException as e:
-#            print("Failed to connect: ", e)
-#        finally:
-#            ssh.close()
+        diagnose_button.pack()
+
 
 app = DiagnFrame()
 app.mainloop()
