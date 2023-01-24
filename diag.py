@@ -97,7 +97,7 @@ class DiagnFrame(tk.Tk):
             f.write("Uptime: " + self.uptime.strip() + "\n")
             f.write("Disk Space: " + self.disk_space.strip() + "\n")
             f.write("OS version: " + self.os_version.strip() + "\n")
-            f.write("_________________________________________________")
+            f.write("_________________________________________________" + "\n")
 
 app = DiagnFrame()
 app.mainloop()
