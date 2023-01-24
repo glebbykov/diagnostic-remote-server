@@ -49,6 +49,9 @@ class DiagnFrame(tk.Tk):
             self.result_window = tk.Toplevel(self)
             self.result_window.title("Diagnostic Result")
 
+            host_label = tk.Label(self.result_window, text="Host: " + host.strip())
+            host_label.pack()
+
             uptime_label = tk.Label(self.result_window, text="Uptime: " + uptime.strip())
             uptime_label.pack()
 
