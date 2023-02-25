@@ -8,7 +8,7 @@ The application looks like this:
 
 To get started, you'll need to have Python 3 and the following libraries installed:
 
-+ tkinter
++ __tkinter__
 + paramiko
 + GUI for OS (if necessary)
 
