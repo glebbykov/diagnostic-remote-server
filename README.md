@@ -10,7 +10,7 @@ To get started, you'll need to have Python 3 and the following libraries install
 
 + __tkinter__
 + __paramiko__
-+ GUI for OS (if necessary)
++ __GUI for OS (if necessary)__
 
 If you have CentOS 7 and no GUI is configured, use the environment_for_centos7.sh script located in the current repository.
 
